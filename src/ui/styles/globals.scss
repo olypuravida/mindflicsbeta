@@ -1,0 +1,61 @@
+:root {
+  --primary-light-bg-color: rgb(227, 242, 253);
+  --secondary-light-bg-color: rgb(237, 231, 246);
+  --content-bg-color: rgb(238, 242, 246);
+
+  --border-radius: .5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+header {
+  padding-right: 0 !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  display: flex !important;
+  flex: 1;
+}
+
+div[role="presentation"].MuiDrawer-root.MuiModal-root {
+  top: inherit;
+  bottom: inherit;
+  left: inherit;
+  right: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #000 !important;
+  caret-color: #000 !important;
+}
