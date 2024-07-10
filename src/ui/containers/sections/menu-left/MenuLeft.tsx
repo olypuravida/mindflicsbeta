@@ -8,13 +8,18 @@ import SendIcon from '@mui/icons-material/Send';
 import Typography from '@mui/material/Typography';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import { MenuLeftItem } from '../menu-left-item/MenuLeftItem';
+import { MenuLeftItemBottom } from "../menu-left-item-bottom";
 
 
 export function MenuLeft() {
     return (
-        <MenuList>
-            <MenuLeftItem />
-            <MenuLeft />
-        </MenuList>
+        <> 
+            <MenuList>
+                <MenuLeftItem />
+            </MenuList>
+            <MenuList>
+                <MenuLeftItemBottom />
+            </MenuList>
+        </>
     )
 }

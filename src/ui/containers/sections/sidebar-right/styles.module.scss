@@ -1,0 +1,15 @@
+.container {
+    background-color: transparent;
+    height: 100%;
+}
+
+.toolbarRight {
+    display: flex !important;
+    gap: .5rem;
+    flex-direction: row !important;
+    align-items: center;
+}
+
+.badge_container {
+    width: 100%;
+}

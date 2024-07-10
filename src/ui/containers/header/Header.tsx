@@ -27,6 +27,7 @@ export function Header() {
     >
       <Container>
         <Toolbar>
+          
           <Box className={ styles.toolbarLeft }>
             <LogoSection />
           </Box>

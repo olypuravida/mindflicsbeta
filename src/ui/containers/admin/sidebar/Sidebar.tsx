@@ -55,7 +55,7 @@ export function Sidebar() {
             borderRight: 'none',
 
             [breakpoints.up('md')]: {
-              top: '64px'
+              // top: '64px'
             }
           }
         } }

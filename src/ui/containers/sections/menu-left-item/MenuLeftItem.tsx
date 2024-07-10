@@ -12,6 +12,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import SettingsIcon from '@mui/icons-material/Settings';
 
+
 export function MenuLeftItem() {
     return (
         <>
@@ -38,12 +39,6 @@ export function MenuLeftItem() {
                     <NoteAltIcon className={styles.menu_left_item} fontSize="small" />
                 </ListItemIcon>
                 <Typography className={styles.menu_left_item} variant="inherit">Journal</Typography>
-            </MenuItem>
-            <MenuItem className={styles.menu_left_item_bottom} >
-                <ListItemIcon>
-                    <SettingsIcon className={styles.menu_left_item} fontSize="small" />
-                </ListItemIcon>
-                <Typography className={styles.menu_left_item} variant="inherit">Settings</Typography>
             </MenuItem>
         </>
         

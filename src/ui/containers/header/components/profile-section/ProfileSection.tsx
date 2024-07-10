@@ -31,6 +31,7 @@ import { authLogout } from '@/infra/services'
 
 import type { ProfileSectionProps } from './props-types'
 import styles from './styles.module.scss'
+import { Container } from '@react-email/components'
 
 
 export function ProfileSection({ admin }: Readonly<ProfileSectionProps>) {
@@ -88,30 +89,37 @@ export function ProfileSection({ admin }: Readonly<ProfileSectionProps>) {
 
   return (
     <>
+
+      <Container className={ styles.text_profile }>
+          <h2 className={ styles.text_profile_h2 }>#userNameFull</h2>
+          <h3  className={ styles.text_profile_h3 }>#positionClass</h3>
+          <h4  className={ styles.text_profile_h4 }>#userID</h4>
+      </Container>
+
       <Chip
         aria-controls={ open ? 'profile-list-grow' : undefined }
         aria-haspopup="true"
         className={ styles.chip }
         icon={ <Avatar className={ styles.avatar } color="inherit" /> }
-        label={ <IoSettingsOutline color={ palette.primary.main } size="1.6rem" /> }
+        // label={ <IoSettingsOutline color={ palette.primary.main } size="1.6rem" /> }
         onClick={ onToggle }
         ref={ anchorRef }
-        sx={ {
-          '&[aria-controls="profile-list-grow"], &:hover': {
-            borderColor: palette.primary.main,
-            background: `${palette.primary.main} !important`,
-            color: palette.primary.light,
+        //sx={ {
+          //'&[aria-controls="profile-list-grow"], &:hover': {
+            //borderColor: palette.primary.main,
+            //background: `${palette.primary.main} !important`,
+            //color: palette.primary.light,
 
-            '& svg': {
-              stroke: palette.common.white,
-            }
-          },
+            //'& svg': {
+              //stroke: palette.common.white,
+            //}
+          //},
 
-          '& .MuiChip-label': {
-            lineHeight: 0
-          },
-        } }
-        variant="outlined"
+          //'& .MuiChip-label': {
+            //lineHeight: 0
+          //},
+        //} }
+        //variant="outlined"
       />
 
       <Menu
