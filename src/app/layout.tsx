@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { AppLayout } from '@/app/layouts/app/AppLayout'
 
 export const metadata: Metadata = {
-  title: 'Aloja Fácil',
+  title: 'Mindflics',
 }
 
 interface Props {

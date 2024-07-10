@@ -8,6 +8,7 @@ import { SearchSection } from '@/app/containers/sections/search/SearchSection'
 import { PopularSection } from '@/app/containers/sections/popular/PopularSection'
 import { RecommendedSection } from '@/app/containers/sections/recommended/RecommendedSection'
 import { BestPricesSection } from '@/app/containers/sections/best-prices/BestPricesSection'
+import { SidebarLeft } from '@/app/containers/sections/sidebar-left/SidebarLeft'
 
 export default function Home() {
   return (
@@ -15,8 +16,13 @@ export default function Home() {
       <Header />
 
       <Box component="main" mt={ 8 }>
+
+        <SidebarLeft />
+
         <Grid container direction="column">
-          <SearchSection />
+          {/* <SearchSection /> */}
+
+          
 
           <PopularSection />
 
