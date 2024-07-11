@@ -15,7 +15,7 @@ const GENDER_OPTIONS = [
 export function GenderBirthField() {
   return (
     <Box className={ styles.container }>
-      <SelectElement
+      {/* <SelectElement
         fullWidth
         required
         id="gender"
@@ -23,7 +23,7 @@ export function GenderBirthField() {
         margin="normal"
         name="gender"
         options={ GENDER_OPTIONS }
-      />
+      /> */}
 
       <DatePicker
         className={ styles.birth }

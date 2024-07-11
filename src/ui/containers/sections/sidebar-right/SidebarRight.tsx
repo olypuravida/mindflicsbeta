@@ -19,6 +19,7 @@ export function SidebarRight() {
                 <Stack className={ styles.toolbarRight }>
                     <ProfileSection />
                 </Stack>
+                
                 <Container className={ styles.badge_container }>
                     <WorkspacePremiumIcon className={ styles.icon_badge } fontSize="large" />
                     <WorkspacePremiumIcon className={ styles.icon_badge } fontSize="large" />

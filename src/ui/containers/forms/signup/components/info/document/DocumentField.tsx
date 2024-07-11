@@ -22,7 +22,7 @@ export function DocumentField() {
 
   return (
     <Box className={ styles.container }>
-      <SelectElement
+      {/* <SelectElement
         fullWidth
         required
         className={ styles.idType }
@@ -31,7 +31,7 @@ export function DocumentField() {
         margin="normal"
         name="idType"
         options={ DOCUMENT_TYPES }
-      />
+      /> */}
 
       <TextFieldElement
         fullWidth
@@ -42,7 +42,7 @@ export function DocumentField() {
         } }
         className={ styles.idNumber }
         id="idNumber"
-        label="Document Number"
+        label="Student ID"
         margin="normal"
         name="idNumber"
         onChange={ onIdNumberChange }
