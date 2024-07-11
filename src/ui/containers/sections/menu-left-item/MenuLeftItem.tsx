@@ -16,25 +16,25 @@ import SettingsIcon from '@mui/icons-material/Settings';
 export function MenuLeftItem() {
     return (
         <>
-            <MenuItem>
+            <MenuItem className={styles.menu_left_item_li}>
                 <ListItemIcon>
                     <DashboardIcon className={styles.menu_left_item} fontSize="small" />
                 </ListItemIcon>
                 <Typography className={styles.menu_left_item} variant="inherit">Dashboard</Typography>
             </MenuItem>
-            <MenuItem>
+            <MenuItem className={styles.menu_left_item_li}>
                 <ListItemIcon>
                     <OndemandVideoIcon className={styles.menu_left_item} fontSize="small" />
                 </ListItemIcon>
                 <Typography className={styles.menu_left_item} variant="inherit">Videos</Typography>
             </MenuItem>
-            <MenuItem>
+            <MenuItem className={styles.menu_left_item_li}>
                 <ListItemIcon>
                     <DescriptionIcon className={styles.menu_left_item} fontSize="small" />
                 </ListItemIcon>
                 <Typography className={styles.menu_left_item} variant="inherit">Assignments</Typography>
             </MenuItem>
-            <MenuItem>
+            <MenuItem className={styles.menu_left_item_li}>
                 <ListItemIcon>
                     <NoteAltIcon className={styles.menu_left_item} fontSize="small" />
                 </ListItemIcon>

@@ -44,7 +44,7 @@ export function PopularSection() {
       className={ styles.container }
       component="section"
     >
-      <Container>
+      <Container className={ styles.container_general }>
         <Grid
           item
           className={ styles.titleContainer }

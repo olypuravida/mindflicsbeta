@@ -11,7 +11,7 @@ export function SidebarLeft() {
         <Grid item xs={4}>
             <Container className={ styles.container }>
 
-                <div className="logo">
+                <div className={ styles.logo }>
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="206"
