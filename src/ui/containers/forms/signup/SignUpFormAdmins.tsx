@@ -21,9 +21,10 @@ import { PhoneField } from './components/phone'
 import { AddressField } from './components/address'
 import { SchoolField } from './components/school'
 import { ClassField } from './components/class'
-import { StudentIdField } from './components/info/student-id'
+import { PositionField } from './components/position/PositionField'
+import { TeacherIdField } from './components/info/teacher-id'
 
-export function SignUpFormStudents() {
+export function SignUpFormAdmins() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
@@ -78,7 +79,7 @@ export function SignUpFormStudents() {
 
         <GenderBirthField />
 
-        <StudentIdField />
+        <TeacherIdField />
 
         <EmailField />
 
@@ -89,6 +90,8 @@ export function SignUpFormStudents() {
         <SchoolField />
 
         <ClassField />
+
+        <PositionField />
 
         <UsernameField />
 

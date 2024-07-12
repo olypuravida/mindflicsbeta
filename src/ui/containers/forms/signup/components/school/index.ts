@@ -1,1 +1,1 @@
-export * from './SchoolFIeld'
+export * from './SchoolField'

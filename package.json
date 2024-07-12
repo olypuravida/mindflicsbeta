@@ -103,7 +103,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": "20.11.1"
+    "node": "20.x"
   },
   "prisma": {
     "schema": "src/domain/prisma/schema.prisma",
