@@ -1,46 +1,52 @@
 'use client'
 
-import ListItemIcon from "@mui/material/ListItemIcon"
-import MenuItem from "@mui/material/MenuItem"
-import SendIcon from '@mui/icons-material/Send';
-import Typography from '@mui/material/Typography';
+import React from 'react'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import MenuItem from '@mui/material/MenuItem'
+import Typography from '@mui/material/Typography'
 import styles from './styles.module.scss'
 
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
-import DescriptionIcon from '@mui/icons-material/Description';
-import NoteAltIcon from '@mui/icons-material/NoteAlt';
-import SettingsIcon from '@mui/icons-material/Settings';
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo'
+import DescriptionIcon from '@mui/icons-material/Description'
+import NoteAltIcon from '@mui/icons-material/NoteAlt'
 
 
 export function MenuLeftItem() {
     return (
-        <>
-            <MenuItem className={styles.menu_left_item_li}>
-                <ListItemIcon>
-                    <DashboardIcon className={styles.menu_left_item} fontSize="small" />
-                </ListItemIcon>
-                <Typography className={styles.menu_left_item} variant="inherit">Dashboard</Typography>
-            </MenuItem>
-            <MenuItem className={styles.menu_left_item_li}>
-                <ListItemIcon>
-                    <OndemandVideoIcon className={styles.menu_left_item} fontSize="small" />
-                </ListItemIcon>
-                <Typography className={styles.menu_left_item} variant="inherit">Videos</Typography>
-            </MenuItem>
-            <MenuItem className={styles.menu_left_item_li}>
-                <ListItemIcon>
-                    <DescriptionIcon className={styles.menu_left_item} fontSize="small" />
-                </ListItemIcon>
-                <Typography className={styles.menu_left_item} variant="inherit">Assignments</Typography>
-            </MenuItem>
-            <MenuItem className={styles.menu_left_item_li}>
-                <ListItemIcon>
-                    <NoteAltIcon className={styles.menu_left_item} fontSize="small" />
-                </ListItemIcon>
-                <Typography className={styles.menu_left_item} variant="inherit">Journal</Typography>
-            </MenuItem>
-        </>
+      <>
+        <MenuItem className={ styles.menu_left_item_li }>
+          <ListItemIcon>
+            <DashboardIcon className={ styles.menu_left_item } fontSize="small" />
+          </ListItemIcon>
+
+          <Typography className={ styles.menu_left_item } variant="inherit">Dashboard</Typography>
+        </MenuItem>
+
+        <MenuItem className={ styles.menu_left_item_li }>
+          <ListItemIcon>
+            <OndemandVideoIcon className={ styles.menu_left_item } fontSize="small" />
+          </ListItemIcon>
+
+          <Typography className={ styles.menu_left_item } variant="inherit">Videos</Typography>
+        </MenuItem>
+
+        <MenuItem className={ styles.menu_left_item_li }>
+          <ListItemIcon>
+            <DescriptionIcon className={ styles.menu_left_item } fontSize="small" />
+          </ListItemIcon>
+
+          <Typography className={ styles.menu_left_item } variant="inherit">Assignments</Typography>
+        </MenuItem>
+
+        <MenuItem className={ styles.menu_left_item_li }>
+          <ListItemIcon>
+            <NoteAltIcon className={ styles.menu_left_item } fontSize="small" />
+          </ListItemIcon>
+
+          <Typography className={ styles.menu_left_item } variant="inherit">Journal</Typography>
+        </MenuItem>
+      </>
         
     )
 }

@@ -21,7 +21,7 @@ import {
   Typography
 } from '@mui/material'
 
-import { IoHomeOutline, IoSettingsOutline } from 'react-icons/io5'
+import { IoHomeOutline } from 'react-icons/io5'
 // import { RiListSettingsLine } from 'react-icons/ri'
 import { AiOutlineDashboard } from 'react-icons/ai'
 import { FiLogOut } from 'react-icons/fi'
@@ -91,9 +91,11 @@ export function ProfileSection({ admin }: Readonly<ProfileSectionProps>) {
     <>
 
       <Container className={ styles.text_profile }>
-          <h2 className={ styles.text_profile_h2 }>#userNameFull</h2>
-          <h3  className={ styles.text_profile_h3 }>#positionClass</h3>
-          <h4  className={ styles.text_profile_h4 }>#userID</h4>
+        <h2 className={ styles.text_profile_h2 }>#userNameFull</h2>
+
+        <h3 className={ styles.text_profile_h3 }>#positionClass</h3>
+
+        <h4 className={ styles.text_profile_h4 }>#userID</h4>
       </Container>
 
       <Chip

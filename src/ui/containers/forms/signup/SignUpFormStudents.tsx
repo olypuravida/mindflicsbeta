@@ -23,7 +23,7 @@ import { AddressField } from './components/address'
 import { SchoolField } from './components/school'
 import { ClassField } from './components/class'
 
-export function SignUpForm() {
+export function SignUpFormStudents() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
@@ -79,8 +79,6 @@ export function SignUpForm() {
         <GenderBirthField />
 
         <DocumentField />
-
-        {/* <RegionField /> */}
 
         <EmailField />
 

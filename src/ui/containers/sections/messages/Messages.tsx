@@ -1,112 +1,119 @@
 'use client'
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import Chip from '@mui/material/Chip';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import React from 'react'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import Typography from '@mui/material/Typography'
+import CardActions from '@mui/material/CardActions'
+import Button from '@mui/material/Button'
+import Chip from '@mui/material/Chip'
+import Grid from '@mui/material/Grid'
 import styles from './styles.module.scss'
-import ListIcon from '@mui/icons-material/List';
 
 
 export function Messages() {
     return (
-        <Card sx={{ minWidth: 275 }} className={ styles.container_message }>
-            <CardContent>
-                <Typography 
-                    variant="h5" 
-                    component="div" 
-                    className={ styles.title_assignment }>
-                    Messages
-                </Typography>
+      <Card className={ styles.container_message } sx={ { minWidth: 275 } }>
+        <CardContent>
+          <Typography 
+            className={ styles.title_assignment } 
+            component="div" 
+            variant="h5"
+          >
+            Messages
+          </Typography>
 
-                <Grid container spacing={2} className={ styles.grid_assignments }>
-                    <Grid item xs={8}>
-                        <Chip 
-                            label="#textMessageID" 
-                            className={ styles.chip_first_assignment }
-                        />
-                    </Grid>
-                    <Grid className={ styles.grid_second_assignment } item xs={4}>
-                        <Chip 
-                            label="08/12/2024 | 16:01" 
-                            className={ styles.chip_second_assignment }
-                        />
-                    </Grid>
-                </Grid>
+          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
+            <Grid item xs={ 8 }>
+              <Chip 
+                className={ styles.chip_first_assignment } 
+                label="#textMessageID"
+              />
+            </Grid>
 
-                <Grid container spacing={2} className={ styles.grid_assignments }>
-                    <Grid item xs={8}>
-                        <Chip 
-                            label="#textMessageID" 
-                            className={ styles.chip_first_assignment }
-                        />
-                    </Grid>
-                    <Grid className={ styles.grid_second_assignment } item xs={4}>
-                        <Chip 
-                            label="08/12/2024 | 16:01" 
-                            className={ styles.chip_second_assignment }
-                        />
-                    </Grid>
-                </Grid>
+            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
+              <Chip 
+                className={ styles.chip_second_assignment } 
+                label="08/12/2024 | 16:01"
+              />
+            </Grid>
+          </Grid>
 
-                <Grid container spacing={2} className={ styles.grid_assignments }>
-                    <Grid item xs={8}>
-                        <Chip 
-                            label="#textMessageID" 
-                            className={ styles.chip_first_assignment }
-                        />
-                    </Grid>
-                    <Grid className={ styles.grid_second_assignment } item xs={4}>
-                        <Chip 
-                            label="08/12/2024 | 16:01" 
-                            className={ styles.chip_second_assignment }
-                        />
-                    </Grid>
-                </Grid>
+          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
+            <Grid item xs={ 8 }>
+              <Chip 
+                className={ styles.chip_first_assignment } 
+                label="#textMessageID"
+              />
+            </Grid>
 
-                <Grid container spacing={2} className={ styles.grid_assignments }>
-                    <Grid item xs={8}>
-                        <Chip 
-                            label="#textMessageID" 
-                            className={ styles.chip_first_assignment }
-                        />
-                    </Grid>
-                    <Grid className={ styles.grid_second_assignment } item xs={4}>
-                        <Chip 
-                            label="08/12/2024 | 16:01" 
-                            className={ styles.chip_second_assignment }
-                        />
-                    </Grid>
-                </Grid>
+            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
+              <Chip 
+                className={ styles.chip_second_assignment } 
+                label="08/12/2024 | 16:01"
+              />
+            </Grid>
+          </Grid>
 
-                <Grid container spacing={2} className={ styles.grid_assignments }>
-                    <Grid item xs={8}>
-                        <Chip 
-                            label="#textMessageID" 
-                            className={ styles.chip_first_assignment }
-                        />
-                    </Grid>
-                    <Grid className={ styles.grid_second_assignment } item xs={4}>
-                        <Chip 
-                            label="08/12/2024 | 16:01" 
-                            className={ styles.chip_second_assignment }
-                        />
-                    </Grid>
-                </Grid>
+          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
+            <Grid item xs={ 8 }>
+              <Chip 
+                className={ styles.chip_first_assignment } 
+                label="#textMessageID"
+              />
+            </Grid>
 
-            </CardContent>
-            <CardActions className={ styles.card_actions_assigment }>
-                <Button 
-                    variant="outlined" 
-                    size="small"
-                    className={ styles.button_assignment }>See more
-                </Button>
-            </CardActions>
-        </Card>
+            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
+              <Chip 
+                className={ styles.chip_second_assignment } 
+                label="08/12/2024 | 16:01"
+              />
+            </Grid>
+          </Grid>
+
+          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
+            <Grid item xs={ 8 }>
+              <Chip 
+                className={ styles.chip_first_assignment } 
+                label="#textMessageID"
+              />
+            </Grid>
+
+            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
+              <Chip 
+                className={ styles.chip_second_assignment } 
+                label="08/12/2024 | 16:01"
+              />
+            </Grid>
+          </Grid>
+
+          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
+            <Grid item xs={ 8 }>
+              <Chip 
+                className={ styles.chip_first_assignment } 
+                label="#textMessageID"
+              />
+            </Grid>
+
+            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
+              <Chip 
+                className={ styles.chip_second_assignment } 
+                label="08/12/2024 | 16:01"
+              />
+            </Grid>
+          </Grid>
+
+        </CardContent>
+
+        <CardActions className={ styles.card_actions_assigment }>
+          <Button 
+            className={ styles.button_assignment } 
+            size="small"
+            variant="outlined"
+          >
+            See more
+          </Button>
+        </CardActions>
+      </Card>
     )
 }
