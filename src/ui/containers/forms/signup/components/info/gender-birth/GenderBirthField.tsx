@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 import { Box } from '@mui/material'
 import React from 'react'
-import { SelectElement } from 'react-hook-form-mui'
+// import { SelectElement } from 'react-hook-form-mui'
 import { DatePicker } from '@mui/x-date-pickers'
 
 import styles from './styles.module.scss'
 
-const GENDER_OPTIONS = [
-  { label: 'Male', id: 'MALE' },
-  { label: 'Female', id: 'FEMALE' },
-  { label: 'Other', id: 'OTHER' },
-]
+// const GENDER_OPTIONS = [
+//   { label: 'Male', id: 'MALE' },
+//   { label: 'Female', id: 'FEMALE' },
+//   { label: 'Other', id: 'OTHER' },
+// ]
 
 export function GenderBirthField() {
   return (
