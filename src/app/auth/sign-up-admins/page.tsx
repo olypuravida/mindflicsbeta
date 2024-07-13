@@ -8,7 +8,7 @@ import { SignUpForm } from '@/app/containers/forms/signup/SignUpForm'
 // import { useSession } from '@/domain/hooks/cookies'
 import styles from './styles.module.scss'
 
-export default async function SignUpFormCounsellors() {
+export default async function SignUpFormAdmins() {
   // const session = useSession()
   // if (session) return redirect('/')
 
@@ -85,7 +85,7 @@ export default async function SignUpFormCounsellors() {
 
       <Grid item className={ styles.title }>
         <Typography sx={ { color: 'primary.dark' } } variant="h4">
-          Sign Up Counsellor
+          Sign Up Admin
         </Typography>
 
         <Typography color="gray" variant="body1">

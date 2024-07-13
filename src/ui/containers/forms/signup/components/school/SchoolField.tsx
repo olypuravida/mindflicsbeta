@@ -1,15 +1,15 @@
 import React from 'react'
 import { TextFieldElement } from 'react-hook-form-mui'
 
-export function NameschoolField() {
+export function SchoolField() {
   return (
     <TextFieldElement
       fullWidth
       required
-      id="nameschool"
-      label="Nameschool"
+      id="school"
+      label="School"
       margin="normal"
-      name="nameschool"
+      name="school"
     />
   )
 }

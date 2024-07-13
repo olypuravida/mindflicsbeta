@@ -18,7 +18,7 @@ const paddingX = {
 const styles = {
   main: {
     backgroundColor: '#ffffff',
-    fonFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+    fonFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Poppins,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
   },
 
   container: {
