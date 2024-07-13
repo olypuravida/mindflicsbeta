@@ -1,5 +1,17 @@
-.authBtn {
+.authBtnSignUp {
   text-transform: capitalize !important;
+  color: #03989E !important;
+}
+
+.authBtnSignIn {
+  text-transform: capitalize !important;
+  background-color: #03989E !important;
+  width: 100%;
+}
+
+.linkSignIn {
+  flex: auto !important;
+  padding-right: 25px !important;
 }
 
 .avatar {

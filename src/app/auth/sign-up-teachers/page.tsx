@@ -84,7 +84,7 @@ export default async function SignUpTeachers() {
       </Grid>
 
       <Grid item className={ styles.title }>
-        <Typography sx={ { color: 'primary.dark' } } variant="h4">
+        <Typography className={ styles.titleh4 } sx={ { color: 'primary.dark' } } variant="h4">
           Sign Up Teacher
         </Typography>
 
