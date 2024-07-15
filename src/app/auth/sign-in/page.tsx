@@ -2,11 +2,11 @@ import React from 'react'
 // import { redirect } from 'next/navigation'
 import { Divider, Grid, Typography } from '@mui/material'
 
-import { Logo } from '@/app/components/common/logo/Logo'
 import { Link } from '@/app/components/common/link/Link'
 import { SignInForm } from '@/app/containers/forms/signin/SignInForm'
 // import { useSession } from '@/domain/hooks'
 import styles from './styles.module.scss'
+import { LogoMindflics } from '@/app/components/common/logo-mindflics'
 
 export default async function SignIn() {
   // const session = useSession()
@@ -15,11 +15,11 @@ export default async function SignIn() {
   return (
     <Grid container className={ styles.container }>
       <Grid item className={ styles.heading }>
-        <Logo size={ 160 } />
+        <LogoMindflics />
       </Grid>
-
+      
       <Grid item className={ styles.title }>
-        <Typography sx={ { color: 'primary.dark' } } variant="h4">
+        <Typography className={ styles.h4_mindflics } sx={ { color: 'primary.dark' } } variant="h4">
           Hi, Welcome Back
         </Typography>
 
@@ -35,11 +35,11 @@ export default async function SignIn() {
       <Grid item className={ styles.footer }>
         <Divider className={ styles.divider } />
 
-        <Link href="/auth/sign-up" variant="body2">
+        <Link className={ styles.h4_mindflics } href="/auth/sign-up" variant="body2">
           { 'Don\'t have an account? Sign Up' }
         </Link>
 
-        <Link href="/" variant="body2">
+        <Link className={ styles.h4_mindflics } href="/" variant="body2">
           { 'Back to home' }
         </Link>
       </Grid>
