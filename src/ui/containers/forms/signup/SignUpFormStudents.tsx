@@ -1,11 +1,9 @@
 'use client'
 
 import React, { useCallback, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { FormContainer, useForm } from 'react-hook-form-mui'
 import { Alert, Box } from '@mui/material'
 
-import { authLogin } from '@/infra/services'
 import {
   UsernameField,
   PasswordField,
@@ -15,46 +13,78 @@ import {
   GenderBirthField,
 } from './components'
 
-import type { SignUpFormValues } from './props-types'
+import type { SignUpFormStudentsValues } from './props-types'
 import styles from './styles.module.scss'
 import { PhoneField } from './components/phone'
 import { AddressField } from './components/address'
 import { ClassField } from './components/class'
 import { StudentIdField } from './components/info/student-id'
 import { NameschoolField } from './components/nameschool'
+import { createStudent } from '@/infra/services/mindflics/students'
+import type { StudentAttributes } from '../../../../domain/db/mindflics/Student/types'
 
 export function SignUpFormStudents() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const router = useRouter()
 
-  const formCtx = useForm<SignUpFormValues>({
+  const formCtx = useForm<SignUpFormStudentsValues>({
     defaultValues: {
       firstName: '',
       lastName: '',
-      gender: '',
       birthDate: '',
-      documentType: '',
-      documentNumber: '',
+      address: '',
+      phone: '',
+      school: '',
+      position: '',
+      class: '',
+      docType: '',
+      docID: '',
+      avatar: '',
+      gender: '',
       email: '',
       password: '',
       username: '',
     },
   })
 
-  const onSubmit = useCallback(async (data: SignUpFormValues) => {
+  const onSubmit = useCallback(async (data: SignUpFormStudentsValues) => {
     setError(null)
     setIsLoading(true)
 
     try {
-      const { content: { message, user } } = await authLogin(data)
-      console.info({ message, user })
-      router.push('/')
+      console.log(data)
+
+      const dataStudent:StudentAttributes = {
+        username : data.username,
+        email : data.email,
+        password: data.password,
+        info : {
+          firstname : data.firstName,
+          lastname : data.lastName,
+          birthdate: data.birthDate, 
+          address: data.address,
+          phone: data.phone,
+          school: data.school,
+          position: data.position,
+          class: data.class,
+          doctype: data.docType,
+          docid: data.docID,
+          avatar: data.avatar,
+          gender: data.gender
+        }
+      }
+
+      const response = await createStudent(dataStudent)
+      console.log(response)
+
+      // const { content: { message, student } } = await createStudent(data)
+      // console.info({ message, student })
+      // router.push('/')
     } catch (err: any) {
-      const msg = err?.response?.data?.content?.message ?? err.message
-      setError(msg ?? 'Unknown error')
+      // const msg = err?.response?.data?.content?.message ?? err.message
+      // setError(msg ?? 'Unknown error')
     } finally {
-      setIsLoading(false)
+      // setIsLoading(false)
     }
   }, [])
 

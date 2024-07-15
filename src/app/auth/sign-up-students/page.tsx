@@ -4,9 +4,9 @@ import { Divider, Grid, Typography } from '@mui/material'
 
 //import { Logo } from '@/app/components/common/logo/Logo'
 import { Link } from '@/app/components/common/link/Link'
-import { SignUpForm } from '@/app/containers/forms/signup/SignUpForm'
 // import { useSession } from '@/domain/hooks/cookies'
 import styles from './styles.module.scss'
+import { SignUpFormStudents } from '@/app/containers'
 
 export default async function SignUpStudents() {
   // const session = useSession()
@@ -94,7 +94,7 @@ export default async function SignUpStudents() {
       </Grid>
 
       <Grid item className={ styles.form }>
-        <SignUpForm />
+        <SignUpFormStudents />
       </Grid>
 
       <Grid item className={ styles.footer }>
