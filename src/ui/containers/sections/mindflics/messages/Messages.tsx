@@ -6,9 +6,8 @@ import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import CardActions from '@mui/material/CardActions'
 import Button from '@mui/material/Button'
-import Chip from '@mui/material/Chip'
-import Grid from '@mui/material/Grid'
 import styles from './styles.module.scss'
+import { MessagesItems } from '../messages-items'
 
 
 export function Messages() {
@@ -23,85 +22,15 @@ export function Messages() {
             Messages
           </Typography>
 
-          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
-            <Grid item xs={ 8 }>
-              <Chip 
-                className={ styles.chip_first_assignment } 
-                label="#textMessageID"
-              />
-            </Grid>
+          <MessagesItems />
 
-            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
-              <Chip 
-                className={ styles.chip_second_assignment } 
-                label="08/12/2024 | 16:01"
-              />
-            </Grid>
-          </Grid>
+          <MessagesItems />
 
-          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
-            <Grid item xs={ 8 }>
-              <Chip 
-                className={ styles.chip_first_assignment } 
-                label="#textMessageID"
-              />
-            </Grid>
+          <MessagesItems />
 
-            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
-              <Chip 
-                className={ styles.chip_second_assignment } 
-                label="08/12/2024 | 16:01"
-              />
-            </Grid>
-          </Grid>
+          <MessagesItems />
 
-          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
-            <Grid item xs={ 8 }>
-              <Chip 
-                className={ styles.chip_first_assignment } 
-                label="#textMessageID"
-              />
-            </Grid>
-
-            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
-              <Chip 
-                className={ styles.chip_second_assignment } 
-                label="08/12/2024 | 16:01"
-              />
-            </Grid>
-          </Grid>
-
-          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
-            <Grid item xs={ 8 }>
-              <Chip 
-                className={ styles.chip_first_assignment } 
-                label="#textMessageID"
-              />
-            </Grid>
-
-            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
-              <Chip 
-                className={ styles.chip_second_assignment } 
-                label="08/12/2024 | 16:01"
-              />
-            </Grid>
-          </Grid>
-
-          <Grid container className={ styles.grid_assignments } spacing={ 2 }>
-            <Grid item xs={ 8 }>
-              <Chip 
-                className={ styles.chip_first_assignment } 
-                label="#textMessageID"
-              />
-            </Grid>
-
-            <Grid item className={ styles.grid_second_assignment } xs={ 4 }>
-              <Chip 
-                className={ styles.chip_second_assignment } 
-                label="08/12/2024 | 16:01"
-              />
-            </Grid>
-          </Grid>
+          <MessagesItems />
 
         </CardContent>
 
