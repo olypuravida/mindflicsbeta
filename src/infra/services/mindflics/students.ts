@@ -1,6 +1,9 @@
+'use server'
+
 import axios from 'axios'
 
 import type { StudentAttributes } from '@/domain/db/mindflics/Student'
+import { MINDFLICS_USER_API } from '@/domain/constants/env'
 
 interface Response {
   content: {
@@ -28,8 +31,6 @@ export interface StudentResponse extends Response {
   }
 }
 
-const validToken = 'xCzuw1zeH9r4gZl5PLiEeJhfvJp95K7Xi4u91uWuxQaxd8ucV530MmFA0mQjZOzbm2mqZ71aB0DkzvwxGeT9ssSwT79vLeGZP6KP7W3jytgJ1AebXH04DHb6TKvCgyFO'
-
 export const fetchStudents = async () => {
   const url = '/api/users'
   const { data } = await axios.get<StudentsResponse>(url)
@@ -43,8 +44,10 @@ export const fetchStudent = async (id: number) => {
 }
 
 export const createStudent = async (student: StudentAttributes) => {
-  const url = 'https://users-roan-eta.vercel.app/api/auth/register/student'
-  const { data } = await axios.post<StudentResponse>(url, { student })
+  const url =  `${MINDFLICS_USER_API}api/auth/register/student`
+  const { data } = await axios.post<any>(url,  student, { headers: {
+    'Content-Type' : 'application/json',            
+  }  })
   return data
 }
 

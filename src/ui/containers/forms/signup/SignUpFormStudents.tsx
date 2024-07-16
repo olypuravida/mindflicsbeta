@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useCallback, useState } from 'react'
-import { FormContainer, useForm } from 'react-hook-form-mui'
+import { FormContainer, TextFieldElement, useForm } from 'react-hook-form-mui'
 import { Alert, Box } from '@mui/material'
 
 import {
@@ -38,7 +38,7 @@ export function SignUpFormStudents() {
       position: '',
       class: '',
       docType: '',
-      docID: '',
+      studentId: '',
       avatar: '',
       gender: '',
       email: '',
@@ -55,24 +55,27 @@ export function SignUpFormStudents() {
       console.log(data)
 
       const dataStudent:StudentAttributes = {
-        username : data.username,
-        email : data.email,
-        password: data.password,
-        info : {
-          firstname : data.firstName,
-          lastname : data.lastName,
-          birthdate: data.birthDate, 
-          address: data.address,
-          phone: data.phone,
-          school: data.school,
-          position: data.position,
-          class: data.class,
-          doctype: data.docType,
-          docid: data.docID,
-          avatar: data.avatar,
-          gender: data.gender
+        data: {
+          username : data.username,
+          email : data.email,
+          password: data.password,
+          info : {
+            firstName : data.firstName,
+            lastName : data.lastName,
+            birthDate: data.birthDate+'T00:00:00.420Z', 
+            address: data.address,
+            phone: data.phone,
+            school: data.school,
+            position: null,
+            class: data.class,
+            docType: 'STUDENT_CARD',
+            docID: data.studentId,
+            avatar: null,
+            gender: data.gender
+          }
         }
       }
+      console.log(dataStudent)
 
       const response = await createStudent(dataStudent)
       console.log(response)
@@ -87,6 +90,7 @@ export function SignUpFormStudents() {
       // setIsLoading(false)
     }
   }, [])
+
 
   return (
     <FormContainer
@@ -107,7 +111,7 @@ export function SignUpFormStudents() {
         <NameField />
 
         <GenderBirthField />
-
+              
         <StudentIdField />
 
         <EmailField />

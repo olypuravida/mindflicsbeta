@@ -7,8 +7,9 @@ import { Link } from '@/app/components/common/link/Link'
 // import { useSession } from '@/domain/hooks/cookies'
 import styles from './styles.module.scss'
 import { LogoMindflics } from '@/app/components/common/logo-mindflics'
+import { SignUpFormAdmins } from '@/app/containers'
 
-export default async function SignUpFormAdmins() {
+export default async function SignUpAdmins() {
   // const session = useSession()
   // if (session) return redirect('/')
 

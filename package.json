@@ -38,6 +38,7 @@
     "cookies-next": "^4.2.1",
     "cors": "^2.8.5",
     "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.11",
     "deepmerge": "^4.3.1",
     "jose": "^5.3.0",
     "luxon": "^3.4.4",
@@ -104,9 +105,5 @@
   },
   "engines": {
     "node": "20.x"
-  },
-  "prisma": {
-    "schema": "src/domain/prisma/schema.prisma",
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} src/domain/prisma/seed.ts"
   }
 }

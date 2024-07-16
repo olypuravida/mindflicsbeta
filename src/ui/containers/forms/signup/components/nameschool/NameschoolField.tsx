@@ -6,10 +6,10 @@ export function NameschoolField() {
     <TextFieldElement
       fullWidth
       required
-      id="nameschool"
-      label="Nameschool"
+      id="school"
+      label="School"
       margin="normal"
-      name="nameschool"
+      name="school"
     />
   )
 }

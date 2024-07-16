@@ -16,6 +16,7 @@ export interface SignUpFormValues {
 }
 
 export interface SignUpFormStudentsValues {
+  studentId: string
   firstName: string
   lastName: string
   birthDate: string
@@ -25,7 +26,6 @@ export interface SignUpFormStudentsValues {
   position: string 
   class: string 
   docType: string 
-  docID: string 
   avatar: string 
   gender: string 
   email: string
