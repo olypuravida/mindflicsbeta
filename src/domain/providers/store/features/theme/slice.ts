@@ -4,7 +4,8 @@ import { createSlice } from '@reduxjs/toolkit'
 import persistReducer from 'redux-persist/es/persistReducer'
 import storage from 'redux-persist/lib/storage'
 
-import { roboto } from '@/domain/providers/theme'
+// import { roboto } from '@/domain/providers/theme'
+import { poppins } from '@/domain/providers/theme'
 import {
   setBorderRadius,
   setColorMode,
@@ -19,7 +20,7 @@ const initialState: ThemeState = {
   colorMode: 'light',
   drawerOpen: true,
   drawerWidth: 260,
-  fontFamily: roboto.style.fontFamily,
+  fontFamily: poppins.style.fontFamily,
 }
 
 const persistConfig = {

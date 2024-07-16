@@ -14,3 +14,21 @@ export interface SignUpFormValues {
   password: string
   username: string
 }
+
+export interface SignUpFormStudentsValues {
+  studentId: string
+  firstName: string
+  lastName: string
+  birthDate: string
+  address: string
+  phone: string 
+  school: string 
+  position: string 
+  class: string 
+  docType: string 
+  avatar: string 
+  gender: string 
+  email: string
+  password: string
+  username: string
+}

@@ -8,6 +8,11 @@
 
 .heading {
   display: flex;
+  background-color: #03989E !important;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px !important;
 }
 
 .title {
@@ -34,4 +39,8 @@
 .divider {
   width: 100%;
   margin-bottom: 1rem !important;
+}
+
+.h4_mindflics {
+  color: #005c61 !important;
 }

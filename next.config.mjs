@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'standalone',
+  //output: 'standalone',
 
   modularizeImports: {
     '@mui/icons-material': {
@@ -18,10 +18,6 @@ const nextConfig = {
     ],
   },
 
-  experimental: {
-    serverComponentsExternalPackages: ['sequelize'],
-  },
-
   images: {
     remotePatterns: [
       {
@@ -31,14 +27,6 @@ const nextConfig = {
     ],
   },
 
-  webpack(config) {
-    config.ignoreWarnings = [{
-      module: /sequelize/,
-      message: /Module not found|dependency is an expression|is not a exported from/
-    }]
-
-    return config
-  },
 }
 
 export default nextConfig

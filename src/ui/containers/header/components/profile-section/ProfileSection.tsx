@@ -73,13 +73,13 @@ export function ProfileSection({ admin }: Readonly<ProfileSectionProps>) {
     return (
       <>
         <Link href="/auth/sign-up">
-          <Button className={ styles.authBtn } variant="text">
+          <Button className={ styles.authBtnSignUp } variant="text">
             Sign Up
           </Button>
         </Link>
 
-        <Link href="/auth/sign-in">
-          <Button className={ styles.authBtn } variant="contained">
+        <Link className={ styles.linkSignIn } href="/auth/sign-in">
+          <Button className={ styles.authBtnSignIn } variant="contained">
             Sign In
           </Button>
         </Link>

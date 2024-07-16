@@ -20,8 +20,8 @@ import type { SignUpFormValues } from './props-types'
 import styles from './styles.module.scss'
 import { PhoneField } from './components/phone'
 import { AddressField } from './components/address'
-import { SchoolField } from './components/school'
 import { ClassField } from './components/class'
+import { NameschoolField } from './components/nameschool'
 
 export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false)
@@ -88,7 +88,7 @@ export function SignUpForm() {
 
         <AddressField />
 
-        <SchoolField />
+        <NameschoolField />
 
         <ClassField />
 
