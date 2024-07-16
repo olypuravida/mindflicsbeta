@@ -16,7 +16,7 @@ export default async function SignUpAdmins() {
   return (
     <Grid container className={ styles.container }>
       <Grid item className={ styles.heading }>
-        
+
         <LogoMindflics />
 
       </Grid>
