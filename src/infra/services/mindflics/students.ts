@@ -44,16 +44,7 @@ export const fetchStudent = async (id: number) => {
 
 export const createStudent = async (student: StudentAttributes) => {
   const url = 'https://users-roan-eta.vercel.app/api/auth/register/student'
-  const { data } = await axios.post<StudentResponse>(url, { student }, {
-    headers: {
-      'Content-Type'                    : 'application/json',
-      'Access-Control-Allow-Origin'     : 'https://users-roan-eta.vercel.app',
-      'Access-Control-Allow-Credentials': 'true',
-      'Access-Control-Allow-Methods'    : 'POST',
-      'Access-Control-Allow-Headers'    : 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
-      'Authorization': 'Bearer ' + validToken               
-    }
-  })
+  const { data } = await axios.post<StudentResponse>(url, { student })
   return data
 }
 
