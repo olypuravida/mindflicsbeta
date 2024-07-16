@@ -21,11 +21,6 @@ export default function Home() {
         <Grid container direction="column">
           <TitleWelcome />
 
-          <PopularSection />
-
-          <RecommendedSection />
-
-          <BestPricesSection />
 
         </Grid>
 

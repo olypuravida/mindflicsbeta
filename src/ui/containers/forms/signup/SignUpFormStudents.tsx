@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useCallback, useState } from 'react'
-import { FormContainer, TextFieldElement, useForm } from 'react-hook-form-mui'
-import { Alert, Box } from '@mui/material'
+import { FormContainer, useForm } from 'react-hook-form-mui'
+import { Alert, Box, Button, IconButton, Snackbar } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close';
 
 import {
   UsernameField,
@@ -26,6 +27,32 @@ import type { StudentAttributes } from '../../../../domain/db/mindflics/Student/
 export function SignUpFormStudents() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [open, setOpen] = React.useState(false)
+  const [messageSuccess, setMessageSuccess] = React.useState(false)
+
+  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false)
+  }
+
+  const action = (
+    <React.Fragment>
+      <Button color="primary" size="small" onClick={handleClose}>
+        Aceptar
+      </Button>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
 
   const formCtx = useForm<SignUpFormStudentsValues>({
     defaultValues: {
@@ -77,41 +104,48 @@ export function SignUpFormStudents() {
       }
       console.log(dataStudent)
 
-      const response = await createStudent(dataStudent)
-      console.log(response)
+      const { content: { message, user } } =  await createStudent(dataStudent)
+      console.log(message)
 
-      // const { content: { message, student } } = await createStudent(data)
-      // console.info({ message, student })
-      // router.push('/')
+      //const { content: { message, user } } = await createStudent(response)
+      //console.info({ message, user })
+
+      if(user) {
+        //router.push('/auth/sign-in')
+        setOpen(true)
+        setMessageSuccess(message)
+      }
+      
     } catch (err: any) {
-      // const msg = err?.response?.data?.content?.message ?? err.message
-      // setError(msg ?? 'Unknown error')
+      const msg = err?.response?.data?.content?.message ?? err.message
+      setError(msg ?? 'Unknown error')
     } finally {
-      // setIsLoading(false)
+      setIsLoading(false)
     }
   }, [])
 
 
   return (
+    <>
     <FormContainer
-      FormProps={ { className: styles.form } }
-      formContext={ formCtx }
-      onSuccess={ onSubmit }
+      FormProps={{ className: styles.form }}
+      formContext={formCtx}
+      onSuccess={onSubmit}
     >
-      <Box className={ styles.formContainer }>
-        { !!error && (
+      <Box className={styles.formContainer}>
+        {!!error && (
           <Alert
-            className={ styles.alert }
+            className={styles.alert}
             severity="error"
           >
-            { error }
+            {error}
           </Alert>
-        ) }
+        )}
 
         <NameField />
 
         <GenderBirthField />
-              
+
         <StudentIdField />
 
         <EmailField />
@@ -128,8 +162,25 @@ export function SignUpFormStudents() {
 
         <PasswordField />
 
-        <ActionsForm isLoading={ isLoading } />
+        <ActionsForm isLoading={isLoading} />
       </Box>
     </FormContainer>
+    
+    <Snackbar
+        className={styles.snackBarSuccess}
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        action={action} >
+          <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {messageSuccess}
+        </Alert>
+      </Snackbar>
+    </>
   )
 }
