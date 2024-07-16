@@ -27,14 +27,14 @@ export function GenderBirthField() {
       <TextFieldElement
         fullWidth
         required
-        label="Birth Date"
+        InputLabelProps={ {
+          shrink: true,
+        } }
+        defaultValue="2017-05-24"
         id="birthDate"
+        label="Birth Date"
         margin="normal"
         name="birthDate"
-        defaultValue="2017-05-24"
-        InputLabelProps={{
-          shrink: true,
-        }}
         type='date'
       />
 

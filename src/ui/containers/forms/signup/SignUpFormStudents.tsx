@@ -3,7 +3,7 @@
 import React, { useCallback, useState } from 'react'
 import { FormContainer, useForm } from 'react-hook-form-mui'
 import { Alert, Box, Button, IconButton, Snackbar } from '@mui/material'
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from '@mui/icons-material/Close'
 
 import {
   UsernameField,
@@ -30,28 +30,29 @@ export function SignUpFormStudents() {
   const [open, setOpen] = React.useState(false)
   const [messageSuccess, setMessageSuccess] = React.useState(false)
 
-  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+  const onClose = (event: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
-      return;
+      return
     }
     setOpen(false)
   }
 
   const action = (
-    <React.Fragment>
-      <Button color="primary" size="small" onClick={handleClose}>
+    <>
+      <Button color="primary" onClick={ onClose } size="small">
         Aceptar
       </Button>
+
       <IconButton
-        size="small"
         aria-label="close"
         color="inherit"
-        onClick={handleClose}
+        onClick={ onClose }
+        size="small"
       >
         <CloseIcon fontSize="small" />
       </IconButton>
-    </React.Fragment>
-  );
+    </>
+  )
 
 
   const formCtx = useForm<SignUpFormStudentsValues>({
@@ -127,56 +128,57 @@ export function SignUpFormStudents() {
 
   return (
     <>
-    <FormContainer
-      FormProps={{ className: styles.form }}
-      formContext={formCtx}
-      onSuccess={onSubmit}
-    >
-      <Box className={styles.formContainer}>
-        {!!error && (
+      <FormContainer
+        FormProps={ { className: styles.form } }
+        formContext={ formCtx }
+        onSuccess={ onSubmit }
+      >
+        <Box className={ styles.formContainer }>
+          {!!error && (
           <Alert
-            className={styles.alert}
+            className={ styles.alert }
             severity="error"
           >
             {error}
           </Alert>
         )}
 
-        <NameField />
+          <NameField />
 
-        <GenderBirthField />
+          <GenderBirthField />
 
-        <StudentIdField />
+          <StudentIdField />
 
-        <EmailField />
+          <EmailField />
 
-        <PhoneField />
+          <PhoneField />
 
-        <AddressField />
+          <AddressField />
 
-        <NameschoolField />
+          <NameschoolField />
 
-        <ClassField />
+          <ClassField />
 
-        <UsernameField />
+          <UsernameField />
 
-        <PasswordField />
+          <PasswordField />
 
-        <ActionsForm isLoading={isLoading} />
-      </Box>
-    </FormContainer>
+          <ActionsForm isLoading={ isLoading } />
+        </Box>
+      </FormContainer>
     
-    <Snackbar
-        className={styles.snackBarSuccess}
-        open={open}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        action={action} >
-          <Alert
-          onClose={handleClose}
+      <Snackbar
+        action={ action }
+        autoHideDuration={ 6000 }
+        className={ styles.snackBarSuccess }
+        onClose={ onClose }
+        open={ open }
+      >
+        <Alert
+          onClose={ onClose }
           severity="success"
+          sx={ { width: '100%' } }
           variant="filled"
-          sx={{ width: '100%' }}
         >
           {messageSuccess}
         </Alert>
