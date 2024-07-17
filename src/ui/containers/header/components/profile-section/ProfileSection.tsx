@@ -60,7 +60,7 @@ export function ProfileSection({ admin }: Readonly<ProfileSectionProps>) {
     try {
       await authLogout({ accessToken: currentUser?.accessToken })
       setCurrentUser(null)
-      router.push('/')
+      router.push('/auth/sign-in')
     } catch (err) {
       console.error(err)
     } finally {

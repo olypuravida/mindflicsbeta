@@ -10,6 +10,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard'
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo'
 import DescriptionIcon from '@mui/icons-material/Description'
 import NoteAltIcon from '@mui/icons-material/NoteAlt'
+import Link from 'next/link'
 
 
 export function MenuLeftItem() {
@@ -20,7 +21,10 @@ export function MenuLeftItem() {
             <DashboardIcon className={ styles.menu_left_item } fontSize="small" />
           </ListItemIcon>
 
-          <Typography className={ styles.menu_left_item } variant="inherit">Dashboard</Typography>
+          <Link href="/">
+            <Typography className={ styles.menu_left_item } variant="inherit">Dashboard</Typography>
+          </Link>
+          
         </MenuItem>
 
         <MenuItem className={ styles.menu_left_item_li }>
@@ -28,7 +32,10 @@ export function MenuLeftItem() {
             <OndemandVideoIcon className={ styles.menu_left_item } fontSize="small" />
           </ListItemIcon>
 
-          <Typography className={ styles.menu_left_item } variant="inherit">Videos</Typography>
+          <Link href="/videos">
+            <Typography className={ styles.menu_left_item } variant="inherit">Videos</Typography>
+          </Link>
+          
         </MenuItem>
 
         <MenuItem className={ styles.menu_left_item_li }>
@@ -36,15 +43,22 @@ export function MenuLeftItem() {
             <DescriptionIcon className={ styles.menu_left_item } fontSize="small" />
           </ListItemIcon>
 
-          <Typography className={ styles.menu_left_item } variant="inherit">Assignments</Typography>
+          <Link href="/assignments">
+            <Typography className={ styles.menu_left_item } variant="inherit">Assignments</Typography>
+          </Link>
+          
         </MenuItem>
 
         <MenuItem className={ styles.menu_left_item_li }>
+    
           <ListItemIcon>
             <NoteAltIcon className={ styles.menu_left_item } fontSize="small" />
           </ListItemIcon>
 
-          <Typography className={ styles.menu_left_item } variant="inherit">Journal</Typography>
+          <Link href="/journal">
+            <Typography className={ styles.menu_left_item } variant="inherit">Journal</Typography>
+          </Link>
+          
         </MenuItem>
       </>
         

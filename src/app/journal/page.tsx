@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid'
 
 import { Footer } from '@/app/containers/footer'
 import { SidebarLeft } from '@/app/containers/sections/mindflics/sidebar-left'
-import { TitleWelcome } from '../ui/containers/title-welcome/TitleWelcome'
+import { TitleWelcome } from '../../ui/containers/title-welcome/TitleWelcome'
 import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
 import { appCurrentUser } from '@/domain/providers/store'
 import { useRouter } from 'next/navigation'
@@ -17,7 +17,7 @@ export default function Home() {
   const router = useRouter()
   const currentUser = appCurrentUser as any
 
-  console.log('dashboard')
+  console.log('videos')
   console.log(currentUser)
 
   if (currentUser) {
@@ -30,7 +30,7 @@ export default function Home() {
           <Grid container direction="column">
             <TitleWelcome />
   
-            <h1>Mood Tracker here</h1>
+            <h1>Journal content</h1>
   
           </Grid>
   
