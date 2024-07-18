@@ -6,13 +6,17 @@ import Grid from '@mui/material/Grid'
 
 import { Footer } from '@/app/containers/footer'
 import { SidebarLeft } from '@/app/containers/sections/mindflics/sidebar-left'
-import { TitleWelcome } from '../../ui/containers/title-welcome/TitleWelcome'
-import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
+import { TitleVideos } from '../../ui/containers/sections/mindflics/title-videos/TitleVideos'
 import { appCurrentUser } from '@/domain/providers/store'
 import { useRouter } from 'next/navigation'
+import { SearchVideos } from '@/app/containers/sections/mindflics/search-videos'
+import Container from '@mui/material/Container'
+import { FilterCategoryVideos } from '@/app/containers/sections/mindflics/filter-category-videos'
+import { ContentVideos } from '@/app/containers/sections/mindflics/content-videos'
+import Typography from '@mui/material/Typography'
+import styles from './styles.module.scss'
 
 export default function Videos() {
-
 
   const router = useRouter()
   const currentUser = appCurrentUser as any
@@ -28,13 +32,43 @@ export default function Videos() {
           <SidebarLeft />
   
           <Grid container direction="column">
-            <TitleWelcome />
-  
-            <h1>Video Gallery</h1>
+            
+            <TitleVideos />
+
+            <Container>
+              <Grid container spacing={ 2 }>
+                <Grid item xs={ 4 } />
+
+                <Grid item xs={ 8 }>
+                  <SearchVideos />
+                </Grid>
+              </Grid>
+            </Container>
+
+            <Container>
+              <Grid container spacing={ 2 }>
+                <Grid item xs={ 4 }>
+                  <Typography className={ styles.title_videos }>
+                    All the Videos
+                  </Typography>
+                </Grid>
+                
+                <Grid item xs={ 8 }>
+                  <FilterCategoryVideos />
+                </Grid>
+              </Grid>
+            </Container>
+
+            <ContentVideos />
+
+            <ContentVideos />
+
+            <ContentVideos />
+            
   
           </Grid>
   
-          <SidebarRight />
+ 
         </Box>
   
         <Footer />
