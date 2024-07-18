@@ -6,10 +6,12 @@ import Grid from '@mui/material/Grid'
 
 import { Footer } from '@/app/containers/footer'
 import { SidebarLeft } from '@/app/containers/sections/mindflics/sidebar-left'
-import { TitleWelcome } from '../../ui/containers/sections/mindflics/title-welcome/TitleWelcome'
-import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
 import { appCurrentUser } from '@/domain/providers/store'
 import { useRouter } from 'next/navigation'
+import { ContentJournal } from '@/app/containers/sections/mindflics/content-journal'
+import { TitleJournal } from '@/app/containers/sections/mindflics/title-journal'
+import Container from '@mui/material/Container'
+import styles from './styles.module.scss'
 
 export default function Home() {
 
@@ -28,13 +30,14 @@ export default function Home() {
           <SidebarLeft />
   
           <Grid container direction="column">
-            <TitleWelcome />
-  
-            <h1>Journal content</h1>
-  
+            <TitleJournal />
+
+            <Container className={ styles.container_journal }>
+              <ContentJournal />
+            </Container>
+
           </Grid>
   
-          <SidebarRight />
         </Box>
   
         <Footer />
