@@ -6,10 +6,10 @@ import Grid from '@mui/material/Grid'
 import styles from './styles.module.scss'
 import Stack from '@mui/material/Stack'
 import { ProfileSection } from '../../../header/components/profile-section'
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium'
 import { Assignments } from '../assignments/Assignments'
 import { Messages } from '../messages/Messages'
 import Button from '@mui/material/Button'
+import { Badges } from '../badges'
 
 export function SidebarRight() {
     return (
@@ -20,13 +20,7 @@ export function SidebarRight() {
             <ProfileSection />
           </Stack>
                 
-          <Container className={ styles.badge_container }>
-            <WorkspacePremiumIcon className={ styles.icon_badge } fontSize="large" />
-
-            <WorkspacePremiumIcon className={ styles.icon_badge } fontSize="large" />
-
-            <WorkspacePremiumIcon className={ styles.icon_badge } fontSize="large" />
-          </Container>
+          <Badges />
 
           <Container>
             

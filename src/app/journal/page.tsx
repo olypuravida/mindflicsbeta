@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid'
 
 import { Footer } from '@/app/containers/footer'
 import { SidebarLeft } from '@/app/containers/sections/mindflics/sidebar-left'
-import { TitleWelcome } from '../../ui/containers/title-welcome/TitleWelcome'
+import { TitleWelcome } from '../../ui/containers/sections/mindflics/title-welcome/TitleWelcome'
 import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
 import { appCurrentUser } from '@/domain/providers/store'
 import { useRouter } from 'next/navigation'
