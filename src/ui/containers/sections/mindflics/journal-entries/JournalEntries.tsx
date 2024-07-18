@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography'
 import CardActions from '@mui/material/CardActions'
 import Button from '@mui/material/Button'
 import styles from './styles.module.scss'
-import AssignmentsItems from '../assignments-items/AssignmentsItems'
+import { JournalEntriesItems } from '../journal-entries-items/JournalEntriesItems'
 
 
 export function JournalEntries() {
@@ -22,7 +22,13 @@ export function JournalEntries() {
             Journal Entries
           </Typography>
 
-          <AssignmentsItems />  
+          <JournalEntriesItems />  
+
+          <JournalEntriesItems />  
+
+          <JournalEntriesItems />  
+
+          <JournalEntriesItems />  
 
         </CardContent>
 
