@@ -3,8 +3,7 @@
 import axios from 'axios'
 
 import type { AdminAttributes } from '@/domain/db/mindflics/Admin'
-import { MINDFLICS_USER_API } from '@/domain/constants/env'
-import { MINDFLICS_USER_AUTH_TOKEN } from '@/domain/constants/env'
+import { MINDFLICS_USER_API , MINDFLICS_USER_AUTH_TOKEN } from '@/domain/constants/env'
 
 
 interface Response {

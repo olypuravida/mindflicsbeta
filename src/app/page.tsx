@@ -15,7 +15,7 @@ export default function Home() {
 
 
   const router = useRouter()
-  const currentUser = appCurrentUser as any
+  const currentUser = appCurrentUser() as any
 
   console.log('dashboard')
   console.log(currentUser)
