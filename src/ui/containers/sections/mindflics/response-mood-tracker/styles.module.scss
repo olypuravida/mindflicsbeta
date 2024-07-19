@@ -28,4 +28,15 @@
 
 .container_response_mood_tracker {
     width: 65% !important;
+    margin-top: 150px !important;
+}
+
+.footer_response_mood_tracker {
+    position: absolute !important;
+    bottom: 0 !important;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
 }
