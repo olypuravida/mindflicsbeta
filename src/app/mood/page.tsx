@@ -6,21 +6,21 @@ import Grid from '@mui/material/Grid'
 
 import { Footer } from '@/app/containers/footer'
 import { SidebarLeft } from '@/app/containers/sections/mindflics/sidebar-left'
-import { TitleWelcome } from '../ui/containers/sections/mindflics/title-welcome/TitleWelcome'
-import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
 import { appCurrentUser } from '@/domain/providers/store'
 import { useRouter } from 'next/navigation'
-import { Wheel } from '@/app/containers/sections/mindflics/mood-tracker'
-import styles from './styles.module.scss'
 import Container from '@mui/material/Container'
+import styles from './styles.module.scss'
+import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
+import { Wheel } from '@/app/containers/sections/mindflics/mood-tracker/wheel1/Wheel'
+import { TitleWelcome } from '@/app/containers/sections/mindflics/title-welcome'
 
-export default function Home() {
+export default function Mood() {
 
 
   const router = useRouter()
-  const currentUser = appCurrentUser() as any
+  const currentUser = appCurrentUser as any
 
-  console.log('dashboard')
+  console.log('videos')
   console.log(currentUser)
 
   if (currentUser) {
@@ -33,15 +33,14 @@ export default function Home() {
           <Grid container direction="column">
             <TitleWelcome />
 
-
             <Container className={ styles.container_mood_wheel }>
               <Wheel />
             </Container>
-            
-  
+
           </Grid>
-  
+
           <SidebarRight />
+  
         </Box>
   
         <Footer />
