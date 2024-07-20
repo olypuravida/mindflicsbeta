@@ -11,8 +11,9 @@ import { useRouter } from 'next/navigation'
 import Container from '@mui/material/Container'
 import styles from './styles.module.scss'
 import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
-import { Wheel } from '@/app/containers/sections/mindflics/mood-tracker/wheel1/Wheel'
 import { TitleWelcome } from '@/app/containers/sections/mindflics/title-welcome'
+import { WheelCotainer } from '@/app/containers/sections/mindflics/mood-tracker/wheel-container/WheelContainer'
+import { Typography } from '@mui/material'
 
 export default function Mood() {
 
@@ -34,7 +35,19 @@ export default function Mood() {
             <TitleWelcome />
 
             <Container className={ styles.container_mood_wheel }>
-              <Wheel />
+              <Typography className={ styles.title_mood_wheel }>
+                Mood Tracker
+              </Typography>
+              
+              <WheelCotainer />
+
+              <Typography className={ styles.title_mood_wheel }>
+                How are you feeling now?
+              </Typography>
+
+              <Typography className={ styles.subtitle_mood_wheel }>
+                Select your current mood
+              </Typography>
             </Container>
 
           </Grid>
