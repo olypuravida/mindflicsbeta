@@ -1,7 +1,7 @@
-import { teacherDb } from '../../teacher'
+import { adminDb } from '../../admin'
 
-export const getTeachers = async () => {
-  const { Teacher } = await teacherDb()
-  const teachers = await Teacher.findAll()
-  return teachers
+export const getAdmins = async () => {
+  const { Admin } = await adminDb()
+  const admins = await Admin.findAll()
+  return admins
 }

@@ -7,7 +7,7 @@ import { Sequelize } from 'sequelize-typescript'
 import config from './config/sequelize'
 
 import {
-  Journal
+  Counsellor
 } from './mindflics'
 
 let sequelize: Sequelize
@@ -15,7 +15,7 @@ let sequelize: Sequelize
 
 export const useMinflicsUser = () => {
   const libsql = createClient({
-    url: process.env.MINDFLICS_JOURNAL_DATABASE_URL as string,
+    url: process.env.MINDFLICS_USER_DATABASE_URL as string,
     authToken: process.env.MINDFLICS_USER_AUTH_TOKEN,
   })
 
@@ -31,11 +31,11 @@ export const useSequelize = () => {
   return sequelize
 }
 
-export const journalDb = async (sync: boolean = false) => {
+export const counsellorDb = async (sync: boolean = false) => {
   if (!sequelize) { useSequelize() }
 
   sequelize.addModels([
-    Journal
+    Counsellor
   ])
 
   if (sync) {
@@ -44,6 +44,6 @@ export const journalDb = async (sync: boolean = false) => {
 
   return {
     sequelize,
-    Journal,
+    Counsellor,
   }
 }
