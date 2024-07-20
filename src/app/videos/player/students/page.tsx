@@ -11,11 +11,10 @@ import { useRouter } from 'next/navigation'
 import { SearchVideos } from '@/app/containers/sections/mindflics/search-videos'
 import Container from '@mui/material/Container'
 import { FilterCategoryVideos } from '@/app/containers/sections/mindflics/filter-category-videos'
-import { ContentVideos } from '@/app/containers/sections/mindflics/content-videos'
-import Typography from '@mui/material/Typography'
 import styles from './styles.module.scss'
 import { TitleVideoPlayerStudents } from '@/app/containers/sections/mindflics/title-video-player-students'
 import { SidebarRightVideosStudents } from '@/app/containers/sections/mindflics/sidebar-right-videos-students'
+import { ContentVideoPlayerStudents } from '@/app/containers/sections/mindflics/content-video-player-students/ContentVideoPlayerStudents'
 
 export default function Videos() {
 
@@ -48,11 +47,7 @@ export default function Videos() {
 
             <Container>
               <Grid container spacing={ 2 }>
-                <Grid item xs={ 4 }>
-                  <Typography className={ styles.title_videos }>
-                    All the Videos
-                  </Typography>
-                </Grid>
+                <Grid item xs={ 4 } />
                 
                 <Grid item xs={ 8 }>
                   <FilterCategoryVideos />
@@ -60,17 +55,23 @@ export default function Videos() {
               </Grid>
             </Container>
 
-            <ContentVideos />
+            <Container className={ styles.content_video_player_students }>
 
-            <ContentVideos />
+              <Grid container spacing={ 2 }>
+              
+                <Grid item xs={ 8 }>
+                  <ContentVideoPlayerStudents />
+                </Grid>
 
-            <ContentVideos />
-            
+                <Grid item xs={ 4 }>
+                  <SidebarRightVideosStudents />
+                </Grid>
+
+              </Grid>
+            </Container>
   
           </Grid>
         
-          <SidebarRightVideosStudents />
- 
         </Box>
   
         <Footer />

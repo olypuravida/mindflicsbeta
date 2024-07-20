@@ -35,7 +35,7 @@ export default async function SignIn() {
       <Grid item className={ styles.footer }>
         <Divider className={ styles.divider } />
 
-        <Link className={ styles.h4_mindflics } href="/auth/sign-up" variant="body2">
+        <Link className={ styles.h4_mindflics } href="/auth/sign-up-students" variant="body2">
           { 'Don\'t have an account? Sign Up' }
         </Link>
 

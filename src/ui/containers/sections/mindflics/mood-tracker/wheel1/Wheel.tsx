@@ -1,8 +1,12 @@
+'use client'
+
 import React, { useMemo, useRef } from 'react'
 import type { CSSProperties } from 'react'
 import * as d3 from 'd3'
 
 import styles from './styles.module.css'
+import { useRouter } from 'next/navigation'
+
 
 type DataItem = {
   name: string
@@ -27,6 +31,8 @@ export function Wheel(props: PieChartProps) {
     onClickItem,
     labelRadius = 0.8,
   } = props
+
+  const router = useRouter()
 
   const ref = useRef<SVGSVGElement>(null)
   const radius = Math.min(size, size) / 2 - MARGIN
@@ -62,7 +68,8 @@ export function Wheel(props: PieChartProps) {
 
       const onMouseClick = () => {
         if (onClickItem) {
-          onClickItem(p.data)
+          //onClickItem(p.data)
+          router.push('/mood/response')
         }
       }
 

@@ -1,0 +1,45 @@
+.thumb_video_container {
+    padding: 0px !important;
+}
+
+.thumb_video_title {
+    color: #03989E;
+    font-size: 14px;
+}
+
+.thumb_video_subtitle {
+    color: #545454;
+    font-size: 12px;
+}
+
+.title_video_student_main {
+    color: #03989E;
+    font-size: 24px !important;
+}
+
+.subtitle_video_student_main {
+    color: #545454;
+    font-size: 16px !important;
+}
+
+.action_button {
+    padding: 10px;
+    background-color: #00a2a2 !important;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize !important;
+  }
+
+.thumb_video_subcontainer {
+    display: flex !important;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.container_buttons_video_player_students {
+    text-align: right;
+}

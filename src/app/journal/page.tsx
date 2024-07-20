@@ -12,7 +12,7 @@ import { ContentJournal } from '@/app/containers/sections/mindflics/content-jour
 import { TitleJournal } from '@/app/containers/sections/mindflics/title-journal'
 import Container from '@mui/material/Container'
 import styles from './styles.module.scss'
-import { SidebarRightVideos } from '@/app/containers/sections/mindflics/sidebar-right-videos'
+import { SidebarRightJournal } from '@/app/containers/sections/mindflics/sidebar-right-journal'
 
 export default function Home() {
 
@@ -39,7 +39,7 @@ export default function Home() {
 
           </Grid>
 
-          <SidebarRightVideos />
+          <SidebarRightJournal />
   
         </Box>
   
