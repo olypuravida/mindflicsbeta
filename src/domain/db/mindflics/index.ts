@@ -1,2 +1,5 @@
 export * from './Student'
-export * from './Teacher'
+export * from './Journal'
+export * from './Admin'
+export * from './Counsellor'
+

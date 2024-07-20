@@ -1,7 +1,7 @@
-import { teacherDb } from '../../teacher'
+import { counsellorDb } from '../../counsellor'
 
-export const getTeachers = async () => {
-  const { Teacher } = await teacherDb()
-  const teachers = await Teacher.findAll()
-  return teachers
+export const getCounsellors = async () => {
+  const { Counsellor } = await counsellorDb()
+  const counsellors = await Counsellor.findAll()
+  return counsellors
 }
