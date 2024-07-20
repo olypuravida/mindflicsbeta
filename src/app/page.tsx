@@ -10,9 +10,10 @@ import { TitleWelcome } from '../ui/containers/sections/mindflics/title-welcome/
 import { SidebarRight } from '@/app/containers/sections/mindflics/sidebar-right'
 import { appCurrentUser } from '@/domain/providers/store'
 import { useRouter } from 'next/navigation'
-import { Wheel } from '@/app/containers/sections/mindflics/mood-tracker'
 import styles from './styles.module.scss'
 import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import { WheelCotainer } from '@/app/containers/sections/mindflics/mood-tracker/wheel-container/WheelContainer'
 
 export default function Home() {
 
@@ -33,15 +34,26 @@ export default function Home() {
           <Grid container direction="column">
             <TitleWelcome />
 
-
             <Container className={ styles.container_mood_wheel }>
-              <Wheel />
+              <Typography className={ styles.title_mood_wheel }>
+                Mood Tracker
+              </Typography>
+              
+              <WheelCotainer />
+
+              <Typography className={ styles.title_mood_wheel }>
+                How are you feeling now?
+              </Typography>
+
+              <Typography className={ styles.subtitle_mood_wheel }>
+                Select your current mood
+              </Typography>
             </Container>
-            
-  
+
           </Grid>
-  
+
           <SidebarRight />
+  
         </Box>
   
         <Footer />
