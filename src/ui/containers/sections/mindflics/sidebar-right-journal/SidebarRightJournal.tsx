@@ -10,7 +10,7 @@ import { ProfileSection } from '@/app/containers/header/components/profile-secti
 import { Badges } from '../badges/Badges'
 import Button from '@mui/material/Button'
 
-export function SidebarRightVideos() {
+export function SidebarRightJournal() {
     return (
       <Grid item xs={ 4 }>
         <Container className={ styles.container }>

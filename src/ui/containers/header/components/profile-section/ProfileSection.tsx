@@ -72,7 +72,7 @@ export function ProfileSection({ admin }: Readonly<ProfileSectionProps>) {
   if (!currentUser) {
     return (
       <>
-        <Link href="/auth/sign-up">
+        <Link href="/auth/sign-up-students">
           <Button className={ styles.authBtnSignUp } variant="text">
             Sign Up
           </Button>

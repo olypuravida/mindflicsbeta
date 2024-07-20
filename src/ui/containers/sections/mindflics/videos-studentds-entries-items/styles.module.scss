@@ -1,0 +1,69 @@
+.chip_first_assignment {
+    font-size: 14px !important;
+    border-radius: 5px !important;
+    width: 95%;
+    text-align: left;
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+.chip_second_assignment {
+    font-size: 6.5px !important;
+    border-radius: 5px !important;
+}
+
+.grid_second_assignment {
+    padding-left: 0 !important;
+}
+
+.icon_chip_first_assignment {
+    color: #03989E !important;
+}
+
+.title_assignment {
+    text-align: center;
+    margin-bottom: 10px !important;
+}
+
+.grid_assignments {
+    padding-top: 5px !important;
+}
+
+.button_assignment {
+    text-transform: none !important;
+    border-color: #03989E !important;
+    color: #03989E !important;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.card_actions_assigment {
+    display: flex;
+    flex-direction: row-reverse !important;
+}
+
+.container_message {
+    margin-top: 20px;
+    box-shadow: 1px 1px 2px 0px #00000059 !important;
+    border-radius: 10px !important;
+}
+
+.title_video_student_entries {
+    font-size: 14px !important;
+    color: #03989E;
+}
+
+.subtitle_video_student_entries {
+    font-size:12px !important;
+    color: #545454;
+}
+
+.action_button {
+    padding: 10px;
+    background-color: #00a2a2 !important;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize !important;
+  }

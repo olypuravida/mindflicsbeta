@@ -5,6 +5,7 @@ import Container from '@mui/material/Container'
 import styles from './styles.module.scss'
 import Grid from '@mui/material/Grid'
 import { Typography } from '@mui/material'
+import Link from 'next/link'
 
 export function ContentVideos() {
     return (
@@ -50,11 +51,15 @@ export function ContentVideos() {
             </svg>
 
             <Typography className={ styles.thumb_video_title }>
-              Coping with Divorce or Separation
+              <Link href="/videos/player/students">
+                Coping with Divorce or Separation
+              </Link>
             </Typography>
 
             <Typography className={ styles.thumb_video_subtitle }>
-              Coping skills
+              <Link href="/videos/player/students">
+                Coping skills
+              </Link>
             </Typography>
           </Grid>
 
@@ -97,11 +102,15 @@ export function ContentVideos() {
             </svg>
 
             <Typography className={ styles.thumb_video_title }>
-              Coping with Divorce or Separation
+              <Link href="/videos/player/students">
+                Coping with Divorce or Separation
+              </Link>
             </Typography>
 
             <Typography className={ styles.thumb_video_subtitle }>
-              Coping skills
+              <Link href="/videos/player/students">
+                Coping skills
+              </Link>
             </Typography>
           </Grid>
 
@@ -144,11 +153,15 @@ export function ContentVideos() {
             </svg>
 
             <Typography className={ styles.thumb_video_title }>
-              Coping with Divorce or Separation
+              <Link href="/videos/player/students">
+                Coping with Divorce or Separation
+              </Link>
             </Typography>
 
             <Typography className={ styles.thumb_video_subtitle }>
-              Coping skills
+              <Link href="/videos/player/students">
+                Coping skills
+              </Link>
             </Typography>
           </Grid>
 
@@ -191,11 +204,15 @@ export function ContentVideos() {
             </svg>
 
             <Typography className={ styles.thumb_video_title }>
-              Coping with Divorce or Separation
+              <Link href="/videos/player/students">
+                Coping with Divorce or Separation
+              </Link>
             </Typography>
 
             <Typography className={ styles.thumb_video_subtitle }>
-              Coping skills
+              <Link href="/videos/player/students">
+                Coping skills
+              </Link>
             </Typography>
           </Grid>
         </Grid>
