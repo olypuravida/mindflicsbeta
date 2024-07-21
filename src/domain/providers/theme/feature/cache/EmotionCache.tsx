@@ -57,7 +57,7 @@ export function NextAppDirEmotionCacheProvider(props: Readonly<NextAppDirEmotion
 
       if (typeof style !== 'boolean') {
         if (isGlobal) {
-          globals.push({ name, style })
+          globals.push({ name, `${style}` })
         } else {
           styles += style
           dataEmotionAttribute += ` ${name}`
