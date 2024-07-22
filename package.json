@@ -22,7 +22,6 @@
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.5",
     "@faker-js/faker": "^8.4.1",
-    "@fontsource/roboto": "^5.0.13",
     "@libsql/client": "^0.6.0",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",

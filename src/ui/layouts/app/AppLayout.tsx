@@ -3,7 +3,7 @@ import '@/domain/polyfills'
 
 import { LocalizationProvider } from '@/domain/providers/localization'
 import { StoreProvider } from '@/domain/providers/store'
-import { ThemeProvider } from '@/domain/providers/theme'
+import { ThemeProvider, poppins } from '@/domain/providers/theme'
 import { TopLoader } from '@/app/containers'
 import { isDev } from '@/domain/utils'
 
@@ -13,7 +13,7 @@ import '@/app/styles/globals.scss'
 export function AppLayout({ children }: Readonly<AppLayoutProps>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className={ poppins.className }>
         <StoreProvider isDev={ isDev() }>
           <ThemeProvider>
             <LocalizationProvider>
