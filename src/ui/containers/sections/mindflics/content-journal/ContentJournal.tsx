@@ -72,7 +72,7 @@ export function ContentJournal() {
       
       console.log(dataJournal)
 
-      const { content: { message }, status } =  await createJournal(dataJournal)
+      const { content: { message }, status } =  await createJournal(dataJournal, currentUser?.accessToken)
       console.log(message)
 
       //const { content: { message, user } } = await createStudent(response)
