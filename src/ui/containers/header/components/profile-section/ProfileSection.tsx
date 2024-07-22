@@ -89,13 +89,12 @@ export function ProfileSection({ admin }: Readonly<ProfileSectionProps>) {
 
   return (
     <>
-
       <Container className={ styles.text_profile }>
-        <h2 className={ styles.text_profile_h2 }>#userNameFull</h2>
+        <h2 className={ styles.text_profile_h2 }>{ currentUser.username }</h2>
 
-        <h3 className={ styles.text_profile_h3 }>#positionClass</h3>
+        <h3 className={ styles.text_profile_h3 }>{ currentUser.info.class }</h3>
 
-        <h4 className={ styles.text_profile_h4 }>#userID</h4>
+        <h4 className={ styles.text_profile_h4 }>{ currentUser.id }</h4>
       </Container>
 
       <Chip
