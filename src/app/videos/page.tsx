@@ -35,36 +35,40 @@ export default function Videos() {
             
             <TitleVideos />
 
-            <Container>
-              <Grid container spacing={ 2 }>
-                <Grid item xs={ 4 } />
+            <Grid container direction="column">
 
-                <Grid item xs={ 8 }>
-                  <SearchVideos />
-                </Grid>
-              </Grid>
-            </Container>
 
-            <Container>
-              <Grid container spacing={ 2 }>
-                <Grid item xs={ 4 }>
-                  <Typography className={ styles.title_videos }>
-                    All the Videos
-                  </Typography>
+              <Container>
+                <Grid container spacing={ 2 }>
+                  <Grid item xs={ 3 } />
+
+                  <Grid item xs={ 9 }>
+                    <SearchVideos />
+                  </Grid>
                 </Grid>
+              </Container>
+
+              <Container>
+                <Grid container spacing={ 2 }>
+                  <Grid item xs={ 4 }>
+                    <Typography className={ styles.title_videos }>
+                      All the Videos
+                    </Typography>
+                  </Grid>
                 
-                <Grid item xs={ 8 }>
-                  <FilterCategoryVideos />
+                  <Grid item xs={ 8 }>
+                    <FilterCategoryVideos />
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Container>
+              </Container>
 
-            <ContentVideos />
+              <ContentVideos />
 
-            <ContentVideos />
+              <ContentVideos />
 
-            <ContentVideos />
-            
+              <ContentVideos />
+
+            </Grid>
   
           </Grid>
   
