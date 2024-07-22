@@ -3,7 +3,7 @@
 import axios from 'axios'
 
 import type { JournalAttributes } from '@/domain/db/mindflics/Journal'
-import { MINDFLICS_JOURNAL_API, MINDFLICS_USER_AUTH_TOKEN } from '@/domain/constants/env'
+import { MINDFLICS_JOURNAL_API } from '@/domain/constants/env'
 
 interface Response {
   content: {
@@ -43,11 +43,11 @@ export const fetchJournal = async (id: number) => {
   return data
 }
 
-export const createJournal = async (journal: JournalAttributes) => {
+export const createJournal = async (journal: JournalAttributes, userToken: any) => {
   const url =  `${MINDFLICS_JOURNAL_API}/api/journal`
   const { data } = await axios.post<any>(url,  journal, { headers: {
     'Content-Type' : 'application/json',            
-    'Authorization':  `Bearer ${MINDFLICS_USER_AUTH_TOKEN}`,
+    'Authorization':  `Bearer ${userToken}`,
   }  })
   return data
 }
