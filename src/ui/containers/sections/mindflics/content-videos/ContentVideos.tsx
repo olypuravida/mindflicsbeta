@@ -15,17 +15,17 @@ export function ContentVideos() {
           <Grid item xs={ 3 }>
             <svg
               fill="none"
-              height="157"
-              viewBox="0 0 275 157"
-              width="275"
+              height="143"
+              viewBox="0 0 250 143"
+              width="250"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <rect
                 fill="url(#pattern0_134_7279)"
-                height="157"
+                height="143"
                 rx="8"
-                width="275"
+                width="250"
               />
 
               <defs>
@@ -66,17 +66,17 @@ export function ContentVideos() {
           <Grid item xs={ 3 }>
             <svg
               fill="none"
-              height="157"
-              viewBox="0 0 275 157"
-              width="275"
+              height="143"
+              viewBox="0 0 250 143"
+              width="250"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <rect
                 fill="url(#pattern0_134_7279)"
-                height="157"
+                height="143"
                 rx="8"
-                width="275"
+                width="250"
               />
 
               <defs>
@@ -117,17 +117,17 @@ export function ContentVideos() {
           <Grid item xs={ 3 }>
             <svg
               fill="none"
-              height="157"
-              viewBox="0 0 275 157"
-              width="275"
+              height="143"
+              viewBox="0 0 250 143"
+              width="250"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <rect
                 fill="url(#pattern0_134_7279)"
-                height="157"
+                height="143"
                 rx="8"
-                width="275"
+                width="250"
               />
 
               <defs>
@@ -151,7 +151,6 @@ export function ContentVideos() {
                 />
               </defs>
             </svg>
-
 
             <Typography className={ styles.thumb_video_title }>
               <Link href="/videos/player/students">
@@ -169,17 +168,17 @@ export function ContentVideos() {
           <Grid item xs={ 3 }>
             <svg
               fill="none"
-              height="157"
-              viewBox="0 0 275 157"
-              width="275"
+              height="143"
+              viewBox="0 0 250 143"
+              width="250"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <rect
                 fill="url(#pattern0_134_7279)"
-                height="157"
+                height="143"
                 rx="8"
-                width="275"
+                width="250"
               />
 
               <defs>
@@ -203,7 +202,6 @@ export function ContentVideos() {
                 />
               </defs>
             </svg>
-
 
             <Typography className={ styles.thumb_video_title }>
               <Link href="/videos/player/students">

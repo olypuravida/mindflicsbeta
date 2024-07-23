@@ -17,6 +17,13 @@ export function JournalEntriesItems() {
         <Chip 
           className={ styles.chip_second_assignment } 
           label="08/12/2024 | 16:01"
+          sx={ {
+            '& .MuiChip-label': {
+              paddingLeft: '5px',
+              paddingRight: '5px',
+              width: '100%'
+            }
+          } }
         />
       </Grid>
     </Grid>

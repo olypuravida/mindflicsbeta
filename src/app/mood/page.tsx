@@ -21,7 +21,7 @@ export default function Mood() {
   const router = useRouter()
   const currentUser = appCurrentUser as any
 
-  console.log('videos')
+  console.log('mood tracker')
   console.log(currentUser)
 
   if (currentUser) {
