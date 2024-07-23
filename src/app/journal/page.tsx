@@ -20,7 +20,7 @@ export default function Home() {
   const router = useRouter()
   const currentUser = appCurrentUser as any
 
-  console.log('videos')
+  console.log('journal')
   console.log(currentUser)
 
   if (currentUser) {
