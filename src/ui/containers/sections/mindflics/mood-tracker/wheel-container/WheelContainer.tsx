@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Wheel } from '../wheel1/Wheel'
+import { createEmotion } from '@/infra/services/mindflics/emotion'
+import type { EmotionAttributes } from '@/domain/db/mindflics/Emotion'
+import { appCurrentUser } from '@/domain/providers/store'
+import Snackbar from '@mui/material/Snackbar'
+import Alert from '@mui/material/Alert'
+import Button from '@mui/material/Button'
+import IconButton from '@mui/material/IconButton'
+import CloseIcon from '@mui/icons-material/Close'
+import styles from './styles.module.scss'
+//import router from 'next/dist/client/router'
 
 export function WheelCotainer() {
+
+  //const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [open, setOpen] = React.useState(false)
+  //const [messageError, setMessageError] = React.useState(false)
+  const currentUser = appCurrentUser() as any
+
   const items1 = [
     { name: 'Angry', color: '#c84204', main: 'Angry' },
     { name: 'Scared', color: '#c585b5', main: 'Scared' },
@@ -89,7 +106,67 @@ export function WheelCotainer() {
     { name: 'Guilty', color: '#afd7eb', main: 'Sad' },
   ]
 
-  const onClickItem = (item: any) => {
+  const onClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return
+    }
+    setOpen(false)
+  }
+  
+  const action = (
+    <>
+      <Button color="primary" onClick={ onClose } size="small">
+        Aceptar
+      </Button>
+  
+      <IconButton
+        aria-label="close"
+        color="inherit"
+        onClick={ onClose }
+        size="small"
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </>
+  )
+
+  const onClickItem = async (item: any) => {
+
+    setError(null)
+    //setIsLoading(true)
+
+    console.log(item)
+
+    const dataEmotion:EmotionAttributes = {
+      emotion: item.name,
+      main: item.main
+    }
+
+    try {
+      
+    const { content: { message }, status } =  await createEmotion(currentUser.id, dataEmotion, currentUser?.accessToken )
+    console.log(message)
+
+    //const { content: { message, user } } = await createStudent(response)
+    //console.info({ message, user })
+
+    console.log('status response')
+    console.log(status)
+
+    if(status.success) {
+
+
+      //router.push('/mood/response')
+      
+    }
+    
+  } catch (err: any) {
+    const msg = err?.response?.data?.content?.message ?? err.message
+    setError(msg ?? 'Unknown error')
+  } finally {
+    //setIsLoading(false)
+  }
+
     console.log(item)
     alert(item.name)
   }
@@ -119,6 +196,24 @@ export function WheelCotainer() {
         size={ 260 }
         style={ { zIndex: 3 } }
       />
+    
+      <Snackbar
+        action={ action }
+        autoHideDuration={ 6000 }
+        className={ styles.snackBarError }
+        onClose={ onClose }
+        open={ open }
+      >
+        <Alert
+          onClose={ onClose }
+          severity="error"
+          sx={ { width: '100%' } }
+          variant="filled"
+        >
+          {error}
+        </Alert>
+      </Snackbar>
+
     </div>
   )
 }
