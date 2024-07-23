@@ -68,7 +68,7 @@ export function Wheel(props: PieChartProps) {
 
       const onMouseClick = () => {
         if (onClickItem) {
-          //onClickItem(p.data)
+          onClickItem(p.data)
           router.push('/mood/response')
         }
       }
