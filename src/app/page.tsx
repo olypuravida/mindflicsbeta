@@ -16,8 +16,7 @@ import Typography from '@mui/material/Typography'
 import { WheelCotainer } from '@/app/containers/sections/mindflics/mood-tracker/wheel-container/WheelContainer'
 
 export default function Home() {
-
-
+  
   const router = useRouter()
   const currentUser = appCurrentUser() as any
 

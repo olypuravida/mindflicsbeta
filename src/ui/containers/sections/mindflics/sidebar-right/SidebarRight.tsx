@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
@@ -10,8 +8,15 @@ import { Assignments } from '../assignments/Assignments'
 import { Messages } from '../messages/Messages'
 import Button from '@mui/material/Button'
 import { Badges } from '../badges'
+import { useRouter } from 'next/navigation'
 
 export function SidebarRight() {
+
+  const router = useRouter()
+  const onClickItem = () => {
+    router.push('/journal')
+  }
+
     return (
       <Grid item xs={ 4 }>
         <Container className={ styles.container }>
@@ -33,6 +38,7 @@ export function SidebarRight() {
           <Container>
             <Button 
               className={ styles.button_journal } 
+              onClick={ onClickItem }
               size="large"
               variant="contained"
             >

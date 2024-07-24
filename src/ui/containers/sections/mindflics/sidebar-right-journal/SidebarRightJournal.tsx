@@ -9,8 +9,16 @@ import { JournalEntries } from '../journal-entries'
 import { ProfileSection } from '@/app/containers/header/components/profile-section'
 import { Badges } from '../badges/Badges'
 import Button from '@mui/material/Button'
+import { useRouter } from 'next/navigation'
 
 export function SidebarRightJournal() {
+
+  const router = useRouter()
+
+  const onClickItem = () => {
+    router.push('/journal')
+  }
+
     return (
       <Grid item xs={ 4 }>
         <Container className={ styles.container }>
@@ -28,6 +36,7 @@ export function SidebarRightJournal() {
           <Container>
             <Button 
               className={ styles.button_journal } 
+              onClick={ onClickItem }
               size="large"
               variant="contained"
             >

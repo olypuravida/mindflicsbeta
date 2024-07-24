@@ -62,3 +62,12 @@ export const deleteStudent = async (id: number) => {
   const { data } = await axios.delete<StudentResponse>(url, { data: { id } })
   return data
 }
+
+export const verifyEmail = async (verifyToken: any) => {
+  const url =  `${MINDFLICS_USER_API}/api/auth/verify/email`
+  const { data } = await axios.post<any>(url,  null, { headers: {
+    'Content-Type' : 'application/json',
+    'Authorization':  `Bearer ${verifyToken}`,           
+  }  })
+  return data
+}
