@@ -115,6 +115,7 @@ export function SignUpFormTeachers() {
         //router.push('/auth/sign-in')
         setOpen(true)
         setMessageSuccess(message)
+
       }
       
     } catch (err: any) {
@@ -122,6 +123,7 @@ export function SignUpFormTeachers() {
       setError(msg ?? 'Unknown error')
     } finally {
       setIsLoading(false)
+      formCtx.reset()
     }
   }, [])
 

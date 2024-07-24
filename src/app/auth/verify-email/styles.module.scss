@@ -1,0 +1,35 @@
+.container_mood_response {
+    padding: 20px;
+    box-shadow: 4px 4px 4px 0px #00000029;
+    height: 80% !important;
+    border-radius: 10px;
+    background-color: #FFF;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-content: center !important;
+    align-items: stretch !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; 
+    width: 100% !important;
+}
+
+.footer_response_mood_tracker {
+    position: relative !important;
+    bottom: 0 !important;
+    display: flex;
+    right: 0;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.text_footer_response_mood_tracker {
+    font-size: 16px !important;
+    color: #545454 !important;
+    width: 400px;
+    margin: 0 auto !important;
+    text-align: center;
+    font-size: 16px !important;
+
+}

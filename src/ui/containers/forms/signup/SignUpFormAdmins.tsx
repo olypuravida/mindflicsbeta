@@ -122,6 +122,7 @@ export function SignUpFormAdmins() {
       setError(msg ?? 'Unknown error')
     } finally {
       setIsLoading(false)
+      formCtx.reset()
     }
   }, [])
 
