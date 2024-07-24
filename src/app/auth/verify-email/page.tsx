@@ -6,85 +6,50 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import styles from './styles.module.scss'
 import { ResponseVerifyEmail } from '@/app/containers/sections/mindflics/response-verify-email'
-import { verifyEmail } from '@/infra/services/mindflics/students'
+import { verifyEmail } from '@/infra/services/mindflics/verify'
+import { ResponseVerifyEmailError } from '@/app/containers/sections/mindflics/response-verify-email-error'
 
+interface VerifyEmailProps {
+  searchParams: { token: string };
+}
 
-export default async function VerifyEmail({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-
-  console.log(searchParams?.token)
-
+async function VerifyStatus(token: string) {
   try {
+    const response =  await verifyEmail(token)
+    return response
+  } catch (error:any) {
+    console.log(error.response.data.content)
+    return error.response.data
+  }
+}
+
+export default async function VerifyEmail( { searchParams }: VerifyEmailProps ) {
+
+  const { content: { message }, status } = await VerifyStatus( searchParams.token )
+  console.log(message)
+
+  if(status.success) {
+
+    return (
+      <Grid container direction="column">
+  
+        <Container className={ styles.container_mood_response }>
+          <ResponseVerifyEmail />
+        </Container>
+  
+      </Grid>
+    )
     
-    console.log(searchParams?.token)
-
-    const { content: { message }, status } =  await verifyEmail(searchParams?.token)
-    console.log(message)
-
-    //const { content: { message, user } } = await createStudent(response)
-    //console.info({ message, user })
-
-    console.log('status response')
-    console.log(status)
-
-    if(status.success) {
-
-
-      //router.push('/mood/response')
-
-      return (
-        <Grid container direction="column">
-    
-          <Container className={ styles.container_mood_response }>
-            <ResponseVerifyEmail />
-
-            <h5> 
-              {' '}
-
-              {searchParams?.token}
-
-              {' '}
-            </h5>
-          </Container>
-    
-        </Grid>
-      )
-      
-    } else {
-      return (
-        <Grid container direction="column">
-    
-          <Container className={ styles.container_mood_response }>
-            <h1>Error when trying to verify email, contact your system administrator</h1>
-          </Container>
-    
-        </Grid>
-      )
-    }
-    
-  } catch (err: any) {
-    const msg = err?.response?.data?.content?.message ?? err.message
-    console.log(msg)
-    //setError(msg ?? 'Unknown error')
-  } finally {
-    //setIsLoading(false)
-    console.log('Final')
+  } else {
+    return (
+      <Grid container direction="column">
+  
+        <Container className={ styles.container_mood_response }>
+          <ResponseVerifyEmailError />
+        </Container>
+  
+      </Grid>
+    )
   }
 
-
-  return (
-
-    <h5> 
-      {' Token by get: '}
-
-      {searchParams?.token}
-
-      {' '}
-    </h5>
-  )
-
-  
 }
