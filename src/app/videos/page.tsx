@@ -19,12 +19,11 @@ import styles from './styles.module.scss'
 export default function Videos() {
 
   const router = useRouter()
-  const currentUser = appCurrentUser as any
+  const currentUser = appCurrentUser()
 
-  console.log('videos')
-  console.log(currentUser)
+  console.log(currentUser?.accessToken)
 
-  if (currentUser) {
+  if (currentUser?.accessToken) {
     return (
       <>
         {/* <Header /> */}
@@ -62,11 +61,7 @@ export default function Videos() {
                 </Grid>
               </Container>
 
-              <ContentVideos />
-
-              <ContentVideos />
-
-              <ContentVideos />
+              <ContentVideos dataAccessToken={ currentUser?.accessToken } />
 
             </Grid>
   

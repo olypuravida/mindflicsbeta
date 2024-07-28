@@ -20,7 +20,7 @@ export function ContentJournal() {
   const [error, setError] = useState<string | null>(null)
   const [open, setOpen] = React.useState(false)
   const [messageSuccess, setMessageSuccess] = React.useState(false)
-  const currentUser = appCurrentUser()
+  const currentUser = appCurrentUser() as any
 
   console.log('Actual user')
   console.log(currentUser)
